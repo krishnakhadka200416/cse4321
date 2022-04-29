@@ -1,0 +1,62 @@
+﻿@model LightLib.Web.Models.Patron.PatronDetailModel
+@{ ViewData["Title"] = "Edit Patron"; }
+<section>
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="EditPatron">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <h1>Edit Patron</h1>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+
+                    <label asp-for="FirstName">First Name</label>
+                    <input asp-for="FirstName" required minlength="6" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName">Last Name</label>
+                    <input asp-for="LastName" required maxlength="15" />
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address">Address</label>
+
+                    <input asp-for="Address" />
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DateOfBirth">DOB</label>
+                    <input asp-for="DateOfBirth" required />
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span><br>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email">Email</label>
+                    <input asp-for="Email" type="email" required />
+                    <span asp-validation-for="Email" class="text-danger"></span><br>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Telephone">Phone</label>
+                    <input asp-for="Telephone" maxlength="10" required />
+                    <span asp-validation-for="Telephone" class="text-danger"></span><br>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LibraryCardId">Library Card</label>
+                    <input asp-for="LibraryCardId" required />
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label asp-for="HomeLibrary">Home Library</label>
+                    <input asp-for="HomeLibrary" required />
+                    <span asp-validation-for="HomeLibrary" class="text-danger"></span><br>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="submit" value="Submit" />
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

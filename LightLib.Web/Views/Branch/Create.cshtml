@@ -1,0 +1,66 @@
+﻿@model LightLib.Models.DTOs.LibraryBranchDto
+@{ ViewData["Title"] = "Create Branch"; }
+
+<section>
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="AddBranch">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <h1>Add New Branch</h1>
+
+
+
+                <input type="hidden" asp-for="Id" />
+
+                <div class="form-group">
+                    <label asp-for="Name">Branch Name</label>
+                    <input asp-for="Name" required maxlength="15" />
+                    <br>
+                </div>
+                <div class="form-group">
+
+                    <label asp-for="Address">Address</label>
+                    <input asp-for="Address">
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Telephone">Telephone </label>
+                    <input asp-for="Telephone" required maxlength="15" />
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description">Description </label>
+                    <input asp-for="Description" required maxlength="15" />
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label asp-for="OpenDate">BranchOpenedDate </label>
+                    <input asp-for="OpenDate" required maxlength="15" />
+                    <br>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="IsOpen">IsOpen </label>
+                    <input asp-for="IsOpen" required maxlength="15" />
+                    <br>
+                </div>
+
+
+                <div class="form-group">
+                    <label asp-for="ImageUrl">ImageUrl </label>
+                    <input asp-for="ImageUrl" />
+                    <br>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="submit" value="Submit" />
+                    </div>
+
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</section>
